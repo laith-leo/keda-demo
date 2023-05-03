@@ -3,12 +3,12 @@ kind: ScaledObject
 metadata:
   name: devops-toolkit
 spec:
-  scaleTargetRef:
+  scaleTargetRef:  #DEFINE WHAT KUBERNETES RESOUCES THAT WE WANT TO SCALE, ANY!!
     apiVersion: apps/v1 # Default
     kind: Deployment # Default
     name: devops-toolkit
   pollingInterval: 5 # Default 30
-  cooldownPeriod: 30 # Default 300
+  cooldownPeriod: 30 # Default 300 ##HOW MUCH TIME TO WAITS BEFORE IT SCALES DOWN
   minReplicaCount: 1 # Default 0
   maxReplicaCount: 10 # Default 100
   triggers:
